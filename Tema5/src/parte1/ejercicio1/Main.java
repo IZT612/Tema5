@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int opcion = 2;
+		int opcion;
 		int hora;
 		int minuto;
 		int segundo;
@@ -33,8 +33,12 @@ public class Main {
 			System.out.println("2. Poner la hora.");
 			System.out.println("3. Poner el minuto.");
 			System.out.println("4. Poner el segundo.");
-			System.out.println("5. Incrementar un minuto.");
-			System.out.println("6. Incrementar un segundo.");
+			System.out.println("5. Incrementar un segundo.");
+			System.out.println("6. Salir.");
+			opcion = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println();
 			
 			switch (opcion) {
 			
@@ -61,10 +65,56 @@ public class Main {
 					}
 					
 				}
+				
+				case 3 -> {
+					
+					System.out.println("Introduzca el minuto.");
+					minuto = sc.nextInt();
+					sc.nextLine();
+					
+					if (horita.setMinutos(minuto)) {
+						
+						System.out.println("Minuto cambiado con éxito.");
+						
+					} else {
+						
+						System.out.println("Ha ocurrido algún error.");
+						
+					}
+					
+				}
+				
+				case 4 -> {
+					
+					System.out.println("Introduzca el segundo.");
+					segundo = sc.nextInt();
+					sc.nextLine();
+					
+					if (horita.setSegundo(segundo)) {
+						
+						System.out.println("Segundo cambiado con éxito.");
+						
+					} else {
+						
+						System.out.println("Ha ocurrido algún error.");
+						
+					}
+					
+				}
+				
+				case 5 -> {
+					
+					horita.inc();
+					
+				}
 			
 			}
 			
-		} while (opcion != 0);
+			System.out.println();
+			
+		} while (opcion != 6);
+		
+		sc.close();
 		
 	}
 
