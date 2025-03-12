@@ -44,7 +44,7 @@ public class Main {
 			
 				case 1 -> {
 					
-					System.out.println(horita.toString());
+					System.out.println(horita);
 					
 				}
 				
