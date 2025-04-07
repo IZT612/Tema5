@@ -1,6 +1,6 @@
 package parte2.ejercicio2;
 
-public class Futbolista {
+public class Futbolista implements Comparable<Futbolista>{
 
 	private int numeroCami;
 	private String nombre;
@@ -33,8 +33,43 @@ public class Futbolista {
 			
 		}
 		
+	}
+	
+	public String toString() {
 		
+		return "Número de camiseta: " + this.numeroCami + " | Nombre : " + this.nombre + " | Edad: " + this.edad + " | Número de goles: " + this.numeroGoles;
 		
 	}
+	
+	public boolean equals(Futbolista futbolista) {
+		
+		return (futbolista.nombre.equals(this.nombre) && futbolista.numeroCami == this.numeroCami);
+		
+	}
+
+	@Override
+	public int compareTo(Futbolista futbolista) {
+		
+		int iguales = 0;
+		
+		if (Integer.compare(this.numeroCami, futbolista.numeroCami) == 0) {
+			
+			if (this.nombre.compareTo(futbolista.nombre) == 0) {
+				
+				iguales = 1;
+				
+			}
+			
+		} else {
+			
+			iguales = -1;
+			
+		}
+		
+		return iguales;
+	}
+	
+	
+	
 
 }
