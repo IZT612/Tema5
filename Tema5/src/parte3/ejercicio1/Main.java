@@ -71,6 +71,8 @@ public class Main {
 		
 		System.out.println("Saliendo del programa.");
 		
+		sc.close();
+		
 	}
 
 }

@@ -1,0 +1,34 @@
+Ficha ABSTRACT
+	- id
+	- titulo
+	
+	+ getters
+	+ prestar ABSTRACT
+	
+-------------------------------------------
+
+Libro extends Ficha
+	- autor
+	- editorial
+	
+	+ getters
+	+ prestar
+
+------------------------------------------
+
+Revista extends Ficha
+	- num
+	- año
+	
+	+ getters
+	+ prestar
+
+-------------------------------------------
+	
+DVD extends Ficha
+	- director
+	- año
+	- tipo ENUM (pelicula, documental, serie)
+	
+	+ getters
+	+ prestar
