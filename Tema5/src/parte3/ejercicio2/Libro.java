@@ -41,5 +41,37 @@ public class Libro extends Ficha{
 		return 15;
 		
 	}
+	
+	public boolean setAutor(String autor)  {
+		
+		boolean conseguido = false;
+	
+		if (!autor.isBlank()) {
+			
+			this.autor = autor;
+			conseguido = true;
+			
+		}
+		
+		return conseguido;
+		
+	}
+	
+	public boolean setEditorial(String editorial)  {
+		
+		boolean conseguido = false;
+	
+		if (!editorial.isBlank()) {
+			
+			this.editorial = editorial;
+			conseguido = true;
+			
+		}
+		
+		return conseguido;
+		
+	}
+	
+	
 
 }

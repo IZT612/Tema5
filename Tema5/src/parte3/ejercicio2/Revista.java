@@ -31,5 +31,17 @@ public class Revista extends Ficha{
 		return 10;
 		
 	}
+	
+	public void setNum(int num) {
+		
+		this.num = num;
+		
+	}
+	
+	public void setAño(int año) {
+		
+		this.año = año;
+		
+	}
 
 }
