@@ -34,7 +34,7 @@ public class CuentaAhorro extends CuentaBancaria {
 			
 		String info = super.toString();
 		
-		info = " | Interés: " + this.interes + " | Mantenimiento: " + this.mantenimiento;
+		info += " | Interés: " + this.interes + " | Mantenimiento: " + this.mantenimiento;
 		
 		return info;
 		

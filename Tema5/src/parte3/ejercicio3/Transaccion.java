@@ -67,5 +67,11 @@ public class Transaccion {
 		return this.importe;
 		
 	}
+	
+	public void setImporte(double dinero) {
+		
+		this.importe = dinero;
+		
+	}
 
 }

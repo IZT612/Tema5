@@ -1,0 +1,25 @@
+Contacto
+	- nombre
+	- telefono
+	
+	+ getNombre
+	+ getTelefono
+	+ equals
+	+ toString
+	
+---------------------------------------------
+
+Persona extends Contacto
+	- cumpleaños
+	
+	+ getCumplaños	
+	+ toString
+
+	
+---------------------------------------------
+
+Empresa extends Contacto
+	- paginaWeb
+	
+	+ getPaginaWeb
+	+ toString

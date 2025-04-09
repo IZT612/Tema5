@@ -25,20 +25,23 @@ public class CuentaCorriente extends CuentaBancaria {
 
 		String info = super.toString();
 
-		info = " | Número de transacciones: " + this.numTransacciones + " | Porcentaje que se cobra: "
+		info += " | Número de transacciones: " + this.numTransacciones + " | Porcentaje que se cobra: "
 				+ this.porcentajeCobrado;
 
 		return info;
 
 	}
 
-	public boolean hacerTransaccion(Transaccion transaccion) {
+	public boolean hacerTransaccion(Transaccion transaccion, CuentaBancaria cuentaBancaria) {
 
 		boolean conseguido = false;
+		
+		double dineroTransferido = transaccion.getImporte() - (transaccion.getImporte() * (this.porcentajeCobrado / 100));
 
 		if (this.getSaldo() - transaccion.getImporte() >= 0) {
-			this.setSaldo(this.getSaldo() - transaccion.getImporte() - this.porcentajeCobrado);
+			this.setSaldo(this.getSaldo() - transaccion.getImporte() - dineroTransferido);
 			transacciones.add(transaccion);
+			cuentaBancaria.setSaldo(cuentaBancaria.getSaldo() + dineroTransferido);
 			conseguido = true;
 		}
 
