@@ -1,0 +1,43 @@
+CuentaBancaria
+	- num
+	- saldo
+	- titulares
+	
+	+ ingresar
+	+ retirar
+	+ añadirTitular
+	+ eliminarTitular
+	
+-----------------------------------------------
+
+CuentaAhorro extends CuentaBancaria
+	- interes
+	- mantenimiento
+	
+	+ aplicarInteres
+	+ aplicarMantenimiento
+
+-----------------------------------------------
+
+CuentaCorriente extends CuentaBancaria
+	- numTransacciones
+	- porcentajeCobrado
+
+	+ transaccion
+
+-----------------------------------------------
+
+Transaccion
+	- dia
+	- mes
+	- año
+	- concepto
+	- importe
+
+-----------------------------------------------
+
+Titular
+	- Dni
+	- Nombre
+	- Apellidos
+	- Telefono
